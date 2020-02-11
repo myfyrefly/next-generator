@@ -15,7 +15,6 @@ function generatePassword() {
       var specialChar = confirm("Do you want any special characters?")
     } 
    
-
     var possibleCharArray = []; //create an if based on the selection choices above, these will go into the possibleCharArray array
     var lCase = "abcdefghijklmnopqrstuvwxyz".split("");
     var uCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split(""); //this split separates all my letters like an array
@@ -41,7 +40,14 @@ function generatePassword() {
       possibleCharArray = possibleCharArray.concat(sChars);
       console.log(possibleCharArray);
     }
-      
+
+    if (lowerCaseQ === false &&
+        upperCaseQ === false &&
+        numChar === false &&
+        specialChar === false       
+      ) {
+      alert("You must choose at least one character type.");
+    }
 
    var pwd = "";
 
@@ -52,12 +58,7 @@ function generatePassword() {
     
     console.log(pwd);
 
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-  passwordText.value = pwd;
-    
-     
-
-    
+    var passwordText = document.querySelector("#password");
+    passwordText.value = pwd;
     
   }
