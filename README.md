@@ -1,2 +1,3 @@
 # next-generator
-Password Generator using JavaScript
+
+A random password generator made with JavaScript.
